@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title QR Code Display
+    link(rel='stylesheet', href='/css/style.css')
+    script(src="https://cdn.socket.io/4.4.1/socket.io.min.js")
+    script.
+      var sessionName = "#{sessionName}";
+    script(src='/js/app.js')
+  body
+    .card
+      h1 Scan QR Code
+      img#qrCodeImage(src="", alt="QR Code")
+      div#successMessage.hidden Successfully Connected!
+    .footer
+      p Copyright © #{new Date().getFullYear()} | Created by fdciabdul 
+      a(href='//google.com') Imtaqin.id

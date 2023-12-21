@@ -1,0 +1,72 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ECE5DD; /* WhatsApp chat background color */
+  color: #495057; /* Dark text color for contrast */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 8px;
+  padding: 40px 60px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+  color: #495057;
+  max-width: 500px; /* Limit card size */
+  width: 100%; /* Responsive width */
+}
+
+#qrCodeImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+#successMessage {
+  font-size: 16px;
+  padding: 15px;
+  background-color: #C8E6C9; /* Light green background */
+  color: #256029; /* Dark green text */
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #A5D6A7;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff; /* White background for footer */
+  color: #495057;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  border-top: 1px solid #eaeaea;
+}
+
+/* Additional Styling for WhatsApp-like Look */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #075E54; /* WhatsApp primary color */
+}
+
+a {
+  color: #34B7F1; /* WhatsApp link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

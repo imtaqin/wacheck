@@ -1,0 +1,71 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #ECE5DD;
+    color: #495057;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+}
+
+h1 {
+    color: #075E54; /* WhatsApp primary color */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+li.active {
+    background-color: #C8E6C9;
+    color: #256029;
+    border-color: #A5D6A7;
+}
+
+li.inactive {
+    background-color: #f2f2f2;
+    color: #6c757d;
+    border-color: #eaeaea;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #495057;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    border-top: 1px solid #eaeaea;
+}
+
+a {
+    color: #34B7F1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

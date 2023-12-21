@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Active Sessions
+    link(rel='stylesheet', href='/css/active.css')
+  body
+    .container
+      h1 Active Sessions
+      if activeSessions.length > 0
+        ul
+          each session in activeSessions
+            li(class=session.status ? 'active' : 'inactive')= 'Session Name: ' + session.sessionName + ' | Status: ' + (session.status ? 'Active' : 'Inactive')
+      else
+        p No active sessions found.
+    .footer
+      p Copyright © #{new Date().getFullYear()} | Created by fdciabdul 
+      a(href='//google.com') Imtaqin.id
