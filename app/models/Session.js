@@ -6,11 +6,19 @@ const Session = DB.define('Session', {
         type: DataTypes.STRING,
         allowNull: false,
         primaryKey: true
-      },
-      status: {
+    },
+    status: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false // false means connection not opened
+    },
+    isQrUsed: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
-      }
+    },
+    qrUsedCount: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+    }
 });
 
 module.exports = Session;

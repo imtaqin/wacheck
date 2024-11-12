@@ -6,15 +6,29 @@ socket.on('connect', () => {
   socket.emit('joinRoom', sessionName);
 });
 
-socket.on('qrCode', data => {
-  console.log("QR Code received:", data);
-  const img = document.getElementById('qrCodeImage');
-  if (img && data.sessionName === sessionName) {
-    img.src = data.url;
+// Handle phone number submission
+document.getElementById('submitPhoneNumber').addEventListener('click', () => {
+  const phoneNumber = document.getElementById('phoneNumber').value;
+  if (phoneNumber) {
+    socket.emit('submitPhoneNumber', { sessionName, phoneNumber });
+  } else {
+    alert("Please enter a valid phone number with country code.");
   }
 });
 
+// Display the pairing code when received
+socket.on('pairingCode', data => {
+  console.log("Pairing Code received:", data);
+  const pairingCodeElem = document.getElementById('pairingCode');
+  if (pairingCodeElem && data.sessionName === sessionName) {
+    document.getElementById('inputPhoneNumber').classList.add('hidden');
+    document.getElementById('pairingCodeSection').classList.remove('hidden');
+    pairingCodeElem.textContent = data.code;
+  }
+});
+
+// Show success message when connection opens
 socket.on('connectionOpen', () => {
-  document.getElementById('qrCodeImage').classList.add('hidden');
+  document.getElementById('pairingCodeSection').classList.add('hidden');
   document.getElementById('successMessage').classList.remove('hidden');
 });

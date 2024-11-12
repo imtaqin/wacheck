@@ -9,8 +9,7 @@ async function deleteSession(sessionName) {
   
       // Delete the session folder
       const sessionPath = `./sessions/${sessionName}`;
-       fs.rmSync(sessionPath, { recursive: true, force: true });
-       fs.rmdirSync(sessionPath)
+  
      // console.log(`Session folder ${sessionPath} deleted.`);
     } catch (err) {
     //  console.error('Error handling session close:', err);

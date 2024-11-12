@@ -14,20 +14,68 @@ body {
 .card {
   background-color: #fff; /* White background for the card */
   border-radius: 8px;
-  padding: 40px 60px;
+  padding: 40px 30px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
   color: #495057;
   max-width: 500px; /* Limit card size */
   width: 100%; /* Responsive width */
 }
 
-#qrCodeImage {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #075E54; /* WhatsApp primary color */
 }
 
+/* Styling for the input section */
+#inputPhoneNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#inputPhoneNumber label {
+  font-size: 16px;
+  color: #075E54; /* WhatsApp primary color */
+  margin-bottom: 8px;
+}
+
+#phoneNumber {
+  width: 100%;
+  max-width: 300px; /* Limit width for smaller screens */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+#phoneNumber:focus {
+  border-color: #34B7F1; /* WhatsApp link color */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+#submitPhoneNumber {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #25D366; /* WhatsApp green */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submitPhoneNumber:hover {
+  background-color: #128C7E; /* Darker green on hover */
+}
+
+/* Hidden elements */
 .hidden {
   display: none;
 }
@@ -40,33 +88,4 @@ body {
   margin-top: 20px;
   border-radius: 5px;
   border: 1px solid #A5D6A7;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #fff; /* White background for footer */
-  color: #495057;
-  text-align: center;
-  font-size: 14px;
-  padding: 10px 0;
-  border-top: 1px solid #eaeaea;
-}
-
-/* Additional Styling for WhatsApp-like Look */
-h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #075E54; /* WhatsApp primary color */
-}
-
-a {
-  color: #34B7F1; /* WhatsApp link color */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
