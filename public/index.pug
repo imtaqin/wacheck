@@ -1,21 +1,15 @@
 doctype html
 html
   head
-    title Pairing Code Display
+    title QR Code Display
     link(rel='stylesheet', href='/css/style.css')
     script(src="https://cdn.socket.io/4.4.1/socket.io.min.js")
     script.
       var sessionName = "#{sessionName}";
+    script(src='/js/app.js')
   body
     .card
-      h1 Pairing Code
-      div#inputPhoneNumber
-        label(for='phoneNumber') Enter Your WhatsApp Phone Number:
-        input#phoneNumber(type='text' placeholder='+1234567890')
-        button#submitPhoneNumber(type='button') Submit
-      div#pairingCodeSection.hidden
-        h2 Pairing Code
-        p Please enter the following pairing code in your WhatsApp app:
-        h2#pairingCode Displaying Pairing Code Here...
+      h1 Scan QR Code
+      img#qrCodeImage(src="", alt="QR Code")
       div#successMessage.hidden Successfully Connected!
-    script(src='/js/app.js') 
+

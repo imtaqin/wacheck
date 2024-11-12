@@ -11,12 +11,11 @@ const port = 3000;
 var fs = require("fs");
 var path = require("path");
 const morgan = require("morgan");
-const { synchronizeModels } = require('./app/models');
 const { loadAndInitializeActiveSessions } = require('./app/lib/loadSession');
-
+const { synchronizeModels } = require('./app/models');
 const { startSession } = require('./app/lib/startSession');
 
-synchronizeModels();
+synchronizeModels()
 
 loadAndInitializeActiveSessions(io);
 app.use(express.json());

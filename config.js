@@ -1,6 +1,6 @@
 
 module.exports = {
-    APP_PORT: process.env.APP_PORT ?? 3000,
+    APP_PORT: process.env.APP_PORT ?? 9999,
     DB_HOST: process.env.DB_HOST ?? "localhost",
     DB_NAME: process.env.DB_NAME ?? "checker",
     DB_USER: process.env.DB_USER ?? "root",
